@@ -28,9 +28,11 @@ CREATE TABLE public.users (
 2. cd to project directory
 
 with docker-compose
+
 3. sudo docker-compose up -d, if you haven't installed docker please install it first [here](https://docs.docker.com/get-docker/)
 
 without docker-compose
+
 3. run dep ensure -v on your terminal, if you haven't installed dep please install it first [here](https://golang.github.io/dep/docs/installation.html)
 4. run go run app.go or go build && ./registration
 
