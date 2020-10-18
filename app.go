@@ -6,7 +6,7 @@ import (
 
 	"github.com/gorilla/mux"
 	_ "github.com/lib/pq"
-	"github.com/mahendrafathan/registration/util"
+	"github.com/mahendrafathan/golang_simple_registration_login/util"
 )
 
 func main() {
