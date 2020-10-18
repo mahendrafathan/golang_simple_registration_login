@@ -18,8 +18,9 @@ form.addEventListener('submit', function(e){
         success: function(msg){
             window.location = '/login';
         },
-        error: function(XMLHttpRequest, textStatus, errorThrown) {
-            alert("some error");
+        error: function (xhr, textStatus, errortdrown) {
+            response = xhr.responseText;
+            alert("got error " + response);
         }
     });
 })
