@@ -8,6 +8,27 @@ const month = document.getElementById('month');
 const date = document.getElementById('date');
 const year = document.getElementById('year');
 
+function buildOptions() {
+    // build date option
+    for (i = 1; i <= 31; i++) {
+        var optionDate = document.createElement("option");
+        optionDate.text = i;
+        optionDate.value = i;
+        date.appendChild(optionDate)
+    }
+
+    // build year
+    var nowYear = new Date().getFullYear();
+    var tenYearBefore = nowYear - 10;
+    for (i = 1; i <= 40; i++){
+        var optionYear = document.createElement("option");
+        optionYear.text = tenYearBefore - i;
+        optionYear.value = tenYearBefore - i;
+        year.appendChild(optionYear)
+    }
+}
+window.onload = buildOptions;
+
 function showError(input, message) {
     const formControl = input.parentElement;
     formControl.className = 'form-control error';
@@ -123,8 +144,9 @@ function login(email) {
         success: function(msg){
             window.location = '/';
         },
-        error: function(XMLHttpRequest, textStatus, errorThrown) {
-            alert("some error");
+        error: function (xhr, textStatus, errortdrown) {
+            response = xhr.responseText;
+            alert("got error " + response);
         }
     });
 }

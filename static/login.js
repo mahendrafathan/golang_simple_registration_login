@@ -43,8 +43,9 @@ function login(email){
         success: function(msg){
             window.location = '/';
         },
-        error: function(XMLHttpRequest, textStatus, errorThrown) {
-            alert("some error");
+        error: function (xhr, textStatus, errortdrown) {
+            response = xhr.responseText;
+            alert("got error " + response);
         }
     });
 }
