@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root{
+    --success-color: green;
+    --error-color: red;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f4f6f6;
+    font-family: 'Open sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    border-radius:5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 600px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.form {
+    padding: 30px 40px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-control input[type=text]{
+    padding: 10px;
+    font-size: 12px;
+    border: 2px solid #f0f0f0;
+    display: block;
+    width: 100%;
+}
+
+.form-control .label{
+    font-size: 11px;
+    display: block;
+}
+
+.form-control .label-radio{
+    font-size: 11px;
+    display: inline;
+}
+
+.form-control select,input[type=radio]{
+    padding: 10px;
+    font-size: 12px;
+    margin-right: 5px;
+    border: 2px solid #f0f0f0;
+    display: inline;
+    background-color: white;
+}
+
+.form-control select option[value=""] { 
+    display: none;
+}
+
+.form-control input:focus,select:focus{
+    outline: 0;
+    border-color: #777;
+}
+
+.form-control.success input {
+    border-color: var(--success-color);
+}
+
+.form-control.error input {
+    border-color: var(--error-color);
+}
+
+.form-control small{
+    color: var(--error-color);
+}
+
+.form button {
+    background-color: #3498db;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #3498db;
+    width: 100%;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

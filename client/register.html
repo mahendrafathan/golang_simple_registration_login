@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width-device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/styles.css">
+  <title>Registration Form</title>
+</head>
+
+<body>
+  <div class="container">
+    <form id="form" class="form">
+      <h1>Registration</h1>
+      <div class="form-control">
+        <input type="text" id="mobileNumber" onkeypress="return onlyNumberKey(event)" placeholder="Mobile Number" step="1">
+        <small></small>
+      </div>
+      <div class="form-control">
+        <input type="text" id="firstName" placeholder="First Name">
+        <small></small>
+      </div>
+      <div class="form-control">
+        <input type="text" id="lastName" placeholder="Last Name">
+        <small></small>
+      </div>
+      <div class="form-control">
+        <label class="label">Date of birth</label>
+        <select name="month" id="month">
+          <option value="" disabled selected>Month</option>
+          <option value="01">January</option>
+          <option value="02">February</option>
+        </select>
+        <select name="date" id="date">
+          <option value="" disabled selected>Date</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+        <select name="year" id="year">
+          <option value="" disabled selected>Year</option>
+          <option value="2020">2020</option>
+          <option value="2010">2010</option>
+        </select>
+      </div>
+      <div class="form-control">
+        <div id="gender">
+          <input type="radio" id="gen" name="gender" value="male">
+          <label class="label-radio" for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female">
+          <label class="label-radio" for="female">Female</label>
+        </div>
+      </div>      
+      <div class="form-control">
+        <input type="text" id="email" placeholder="Masukan email">
+        <small></small>
+      </div>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <script src="/static/register.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</body>
+</html>
