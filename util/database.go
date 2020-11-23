@@ -24,7 +24,7 @@ var (
 func ConnectDB() {
 	var err error
 	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+
-		"password=%s dbname=%s sslmode=false",
+		"password=%s dbname=%s sslmode=disable",
 		c.DbHost, c.DbPort, c.DbUser, c.DbPass, c.DbUser)
 	fmt.Println(psqlInfo)
 
