@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/gorilla/mux"
 	_ "github.com/lib/pq"
@@ -23,6 +24,10 @@ func main() {
 	router.HandleFunc("/logout", util.LogoutHandler)
 	router.HandleFunc("/", util.HomeHandler)
 
-	log.Println("starting serve on 3000")
-	http.ListenAndServe(":3000", router)
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "9000" // Default port if not specified
+	}
+	log.Println("starting serve on " + port)
+	http.ListenAndServe(":"+port, router)
 }
