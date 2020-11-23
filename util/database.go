@@ -24,8 +24,9 @@ var (
 func ConnectDB() {
 	var err error
 	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+
-		"password=%s dbname=%s sslmode=require",
+		"password=%s dbname=%s sslmode=false",
 		c.DbHost, c.DbPort, c.DbUser, c.DbPass, c.DbUser)
+	fmt.Println(psqlInfo)
 
 	db, err = sql.Open("postgres", psqlInfo)
 	if err != nil {
