@@ -43,5 +43,5 @@
 
 [metadata.heroku]
   root-package = "github.com/mahendrafathan/golang_simple_registration_login"
-  go-version = "1.15.5"
+  go-version = "1.8.3"
   install = [ "./..." ]
