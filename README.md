@@ -38,7 +38,8 @@ without docker-compose
 
 your app will serve on port 3000, there are 3 page
 ```
-http://localhost:3000/registration
+http://localhost:3000/register
 http://localhost:3000/login
+http://localhost:3000/logout
 http://localhost:3000/ (need login)
 ```
