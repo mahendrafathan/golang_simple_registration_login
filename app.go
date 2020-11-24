@@ -11,7 +11,6 @@ import (
 )
 
 func main() {
-	util.InitConfig()
 	util.ConnectDB()
 
 	router := mux.NewRouter().StrictSlash(true)
