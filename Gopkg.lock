@@ -66,14 +66,6 @@
   version = "v1.8.0"
 
 [[projects]]
-  branch = "main"
-  digest = "1:5b70370155d8709e8244d53da3e831c918c772a6d9a95b55e1e53447f80b064f"
-  name = "github.com/mahendrafathan/golang_simple_registration_login"
-  packages = ["util"]
-  pruneopts = "UT"
-  revision = "60a659addb001b96292e6801cea3671fea1c3199"
-
-[[projects]]
   digest = "1:0028cb19b2e4c3112225cd871870f2d9cf49b9b4276531f03438a88e94be86fe"
   name = "github.com/pmezard/go-difflib"
   packages = ["difflib"]
@@ -125,7 +117,6 @@
     "github.com/gorilla/mux",
     "github.com/kataras/go-sessions",
     "github.com/lib/pq",
-    "github.com/mahendrafathan/golang_simple_registration_login/util",
     "github.com/stretchr/testify/assert",
   ]
   solver-name = "gps-cdcl"

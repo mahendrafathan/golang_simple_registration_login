@@ -1,7 +1,0 @@
-{
-  "db_host": "ec2-34-237-166-54.compute-1.amazonaws.com",
-  "db_port": 5432, 
-  "db_user": "jcboczohwseinw",
-  "db_pass": "62a7f9d11824e8d9e8325c836dc96fda1376cad514376c4da0f8fedf34065e26",
-  "db_name": "dfmu08107nlrop"
-}
