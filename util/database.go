@@ -25,7 +25,6 @@ var (
 func ConnectDB() {
 	var err error
 	psqlInfo := fmt.Sprintf(os.Getenv("DB_CONN"))
-	fmt.Println("==", psqlInfo)
 
 	db, err = sql.Open("postgres", psqlInfo)
 	if err != nil {

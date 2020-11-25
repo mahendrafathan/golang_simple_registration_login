@@ -168,6 +168,38 @@ func LogoutHandler(w http.ResponseWriter, r *http.Request) {
 	NewAjax(w, r, []byte(resp), http.StatusOK)
 }
 
+func SnakeHandler(w http.ResponseWriter, r *http.Request) {
+	if r.Method != "GET" {
+		http.Error(w, "Bad Request", http.StatusBadRequest)
+		return
+	}
+
+	var file = "snake.html"
+	var data map[string]string
+	session := sessions.Start(w, r)
+	if len(session.GetString("email")) == 0 {
+		file = "login.html"
+	} else {
+		data = map[string]string{
+			"email": session.GetString("email"),
+		}
+	}
+
+	var filepath = path.Join("client", file)
+	var tmpl, err = template.ParseFiles(filepath)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	err = tmpl.Execute(w, data)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+}
+
 func NewAjax(w http.ResponseWriter, r *http.Request, js []byte, code int) {
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Content-Type", "application/json")
