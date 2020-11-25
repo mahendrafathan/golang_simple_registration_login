@@ -1,21 +1,13 @@
 const form = document.getElementById('form');
-const mobileNumber = document.getElementById('mobileNumber');
-const firstName = document.getElementById('firstName');
-const lastName = document.getElementById('lastName');
-const email = document.getElementById('email');
-const gender = document.getElementById('gender');
-const month = document.getElementById('month');
-const date = document.getElementById('date');
-const year = document.getElementById('year');
 
 // listener
-form.addEventListener('submit', function(e){
-    e.preventDefault();
+document.getElementById("logout").addEventListener("click", function () {
+    console.log("hallo")
     $.ajax({
         url: `/logout`,
         type: 'GET',
         contentType: 'application/json',
-        success: function(msg){
+        success: function (msg) {
             window.location = '/login';
         },
         error: function (xhr, textStatus, errortdrown) {
@@ -23,4 +15,22 @@ form.addEventListener('submit', function(e){
             alert("got error " + response);
         }
     });
-})
+    form.submit();
+});
+
+document.getElementById("snake").addEventListener("click", function () {
+    console.log("hallo")
+    $.ajax({
+        url: `/snake`,
+        type: 'GET',
+        contentType: 'application/json',
+        success: function (msg) {
+            window.location = '/snake';
+        },
+        error: function (xhr, textStatus, errortdrown) {
+            response = xhr.responseText;
+            alert("got error " + response);
+        }
+    });
+    form.submit();
+});

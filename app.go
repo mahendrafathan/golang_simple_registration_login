@@ -22,6 +22,7 @@ func main() {
 	router.HandleFunc("/login", util.LoginHandler)
 	router.HandleFunc("/logout", util.LogoutHandler)
 	router.HandleFunc("/", util.HomeHandler)
+	router.HandleFunc("/snake", util.SnakeHandler)
 
 	port := os.Getenv("PORT")
 	if port == "" {

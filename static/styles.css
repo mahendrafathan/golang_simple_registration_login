@@ -30,6 +30,10 @@ h1 {
     text-align: center;
 }
 
+a {
+    text-align: center;
+}
+
 .form {
     padding: 30px 40px;
 }
