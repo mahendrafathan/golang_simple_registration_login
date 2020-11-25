@@ -17,31 +17,30 @@ function showSuccess(input, message) {
 }
 
 // listener
-document.getElementById("login").addEventListener('click', function (e) {
+form.addEventListener('submit', function(e){
     e.preventDefault();
-    console.log('hallo');
+
     var isError = false
-    if (email.value === '') {
+    if (email.value === ''){
         isError = showError(email, 'Email harus diisi')
     } else {
         showSuccess(email)
     }
 
-    if (!isError) {
+    if (!isError){
         login(email.value)
     }
-    form.submit();
 })
 
-function login(email) {
+function login(email){
     $.ajax({
         url: `/login`,
         type: 'POST',
         contentType: 'application/json',
-        data: JSON.stringify({
+        data: JSON.stringify({    
             email: email,
-        }),
-        success: function (msg) {
+        }), 
+        success: function(msg){
             window.location = '/';
         },
         error: function (xhr, textStatus, errortdrown) {
@@ -50,7 +49,3 @@ function login(email) {
         }
     });
 }
-
-document.getElementById("register").addEventListener("click", function (e) {
-    window.location = '/register';
-});
