@@ -40,7 +40,6 @@ func ConnectDB() {
 }
 
 func queryUser(email string) (user User, err error) {
-
 	query := fmt.Sprintf(`
 		SELECT email, 
 		first_name, 
