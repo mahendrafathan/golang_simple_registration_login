@@ -6,5 +6,4 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - .:/go/src/github.com/mahendrafathan/registration
-    network_mode: "host"
+      - .:/go/src/github.com/mahendrafathan/golang_simple_registration_login
